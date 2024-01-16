@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/bgPattern.png) no-repeat;
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.heading {
+  font-size: 39px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 2px #00bbff;
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  font-weight: 500;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  color: rgba(3, 2, 78, 0.669);
+}
+
+.stats b {
+  color: #00db50;
+  font-size: 21px;
+}
+
+.stats p {
+  padding: 5px 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px rgba(3, 46, 17, 0.76);
+  cursor: pointer;
+}
+
+.restart {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #00c247;
+  font-family: 'Inter', sans-serif;
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: bolder;
+  border: none;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.646);
+  cursor: pointer;
+}
+
+.board {
+  height: 365px;
+  width: 365px;
+  background-color: green;
+  background: linear-gradient(to bottom right, #60dd8e, #2a898c);
+  border-radius: 7px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  box-shadow: 6px 6px 15px 0 rgba(0, 0, 0, 0.411);
+}
+
+.square,
+.flipped {
+  height: 70px;
+  width: 70px;
+  background-color: #0c3939;
+  border-radius: 7px;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.411);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  cursor: pointer;
+}
+
+.flipped {
+  background-color: #f6fcb4;
+}
+
+.square svg,
+.flipped svg {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+.square svg {
+  display: none;
+}
+
+
+.won-text {
+  display: block;
+  text-align: center;
+}
+
+.won-text b {
+  color: #00db50;
+}
+
+
+@media screen and (max-width:400px) {
+
+  .board {
+    height: 325px;
+    width: 325px;
+  }
+
+  .stats p {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .stats b,
+  .restart {
+    font-size: 14px;
+  }
+
+  .restart {
+    padding: 5px 10px;
+  }
+
+  .square,
+  .flipped {
+    height: 60px;
+    width: 60px;
+  }
+
+  .square svg,
+  .flipped svg {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width:400px) and (max-width:600px) {
+  .stats p {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .stats b,
+  .restart {
+    font-size: 13px;
+  }
+}
