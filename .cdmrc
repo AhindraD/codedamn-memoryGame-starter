@@ -1,4 +1,4 @@
 playground-view: terminal-editor-browser
 tabs: ["src/components/Game.jsx","src/components/Board.jsx","src/components/Square.jsx"]
-terminals: ["yarn install && yarn dev"]
-run-button: yarn dev
+terminals: ["bun install && bun run dev"]
+run-button: bun run dev
